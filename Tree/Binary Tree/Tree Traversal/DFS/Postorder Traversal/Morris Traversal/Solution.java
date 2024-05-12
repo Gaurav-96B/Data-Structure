@@ -1,4 +1,4 @@
-class Tree
+class Solution
 {    
     //Left
     //Right
