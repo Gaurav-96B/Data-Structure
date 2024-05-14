@@ -1,3 +1,5 @@
+// -1<=height(l)-height(r)<=1
+//(-1,0,1)
 class Solution
 {
     boolean isBalanced(Node root)
