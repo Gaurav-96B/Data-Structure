@@ -1,4 +1,4 @@
-                                             Method-1
+                                             DFS For Single Component
 -----------------------------------------------------------------------------------------------------------------------   
 class Solution {
     public ArrayList<Integer> dfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
@@ -22,7 +22,7 @@ class Solution {
     }
     
 }
-                                     Method-2
+                                     DFS for Multiple Component
 -----------------------------------------------------------------------------------------------------------------------------
 
 class Solution {
