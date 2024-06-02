@@ -13,8 +13,7 @@ class Solution {
         visited[src]=true;
         while(!queue.isEmpty())
         {
-            int data=queue.peek();
-            queue.poll();
+            int data=queue.poll();
             ans.add(data);
             for(int adjacent:adj.get(data))
             {
