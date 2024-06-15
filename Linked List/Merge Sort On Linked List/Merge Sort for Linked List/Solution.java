@@ -24,7 +24,7 @@ class Solution
          while(fast!=null&&fast.next!=null){
              prev=slow;
              slow=slow.next;
-             fast=fast.next;
+             fast=fast.next.next;
          }
          prev.next=null;
          return slow;
