@@ -1,4 +1,4 @@
-class GfG
+class Solution
 {
     Node deleteNode(Node head, int x)
     {
