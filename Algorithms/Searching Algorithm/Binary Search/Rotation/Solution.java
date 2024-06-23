@@ -17,7 +17,7 @@ class Solution {
             if(arr[start]<=arr[mid]){
                 start=mid+1;
             }
-            else{
+            else if(arr[mid]<=arr[end]){
                 end=mid-1;
             }
         }
