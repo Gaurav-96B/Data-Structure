@@ -2,19 +2,19 @@
 -------------------------------------------------------------------------------------------------------------------------------------------
 import java.util.*;
 class Stack {
-    Queue<Integer> q1 = new LinkedList<>();
-    Queue<Integer> q2 = new LinkedList<>();
-    
-    public void push(int x) { 
-        q1.add(x); 
-        
+    Queue < Integer > q1 = new LinkedList < > ();
+    Queue < Integer > q2 = new LinkedList < > ();
+
+    public void push(int x) {
+        q1.add(x);
+
     }
-  
+
     public boolean isEmpty() {
         return q1.isEmpty();
     }
-    
-    public void pop(){
+
+    public void pop() {
         if (q1.isEmpty())
             return;
 
@@ -30,17 +30,17 @@ class Stack {
         q1.poll();
 
         // swap the names of two queues
-        Queue<Integer> q = q1;
+        Queue < Integer > q = q1;
         q1 = q2;
         q2 = q;
     }
-    
-    public int size() { 
-        return q1.size(); 
-        
+
+    public int size() {
+        return q1.size();
+
     }
-    
-    public int peek(){
+
+    public int peek() {
         if (q1.isEmpty())
             return -1;
 
@@ -60,14 +60,13 @@ class Stack {
         q2.add(temp);
 
         // swap the two queues names
-        Queue<Integer> q = q1;
+        Queue < Integer > q = q1;
         q1 = q2;
         q2 = q;
         return temp;
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Stack stack = new Stack();
         stack.push(1);
         stack.push(2);
@@ -89,10 +88,10 @@ class Stack {
 ---------------------------------------------------------------------------------------------------------------------------------------------
 import java.util.*;
 class Stack {
-    Queue<Integer> q1 = new LinkedList<>();
-    Queue<Integer> q2 = new LinkedList<>();
-    
-    public void push(int x) { 
+    Queue < Integer > q1 = new LinkedList < > ();
+    Queue < Integer > q2 = new LinkedList < > ();
+
+    public void push(int x) {
         q2.add(x);
 
         // Push all the remaining
@@ -103,37 +102,36 @@ class Stack {
         }
 
         // swap the names of two queues
-        Queue<Integer> q = q1;
+        Queue < Integer > q = q1;
         q1 = q2;
         q2 = q;
-        
+
     }
-    
+
     public boolean isEmpty() {
         return q1.isEmpty();
     }
-    
-    public void pop(){
-       // if no elements are there in q1
+
+    public void pop() {
+        // if no elements are there in q1
         if (q1.isEmpty())
-          return;
+            return;
         q1.poll();
     }
-    
-    public int size() { 
-        return q1.size(); 
-        
+
+    public int size() {
+        return q1.size();
+
     }
-    
-    public int peek(){
-        if (q1.isEmpty()){
+
+    public int peek() {
+        if (q1.isEmpty()) {
             return -1;
         }
         return q1.peek();
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Stack stack = new Stack();
         stack.push(1);
         stack.push(2);
