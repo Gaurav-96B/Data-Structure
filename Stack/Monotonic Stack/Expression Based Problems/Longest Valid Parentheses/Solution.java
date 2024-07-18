@@ -1,11 +1,10 @@
-class Solution{
-    static int maxLength(String x){
+class Solution {
+    static int findMaxLen(String x) {
         int max=0;
         Stack<Integer>stack=new Stack<>();
         stack.push(-1);
         for(int i=0;i<x.length();i++){
-            char openingBracket=x.charAt(i);
-            if(openingBracket=='('){
+            if(x.charAt(i)=='('){
                 stack.push(i);
             }
             else{
