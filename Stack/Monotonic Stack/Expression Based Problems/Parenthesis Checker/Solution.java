@@ -5,20 +5,20 @@ class Solution
     {
         Stack<Character>stack=new Stack<>();
         for(int i=0;i<x.length();i++){
-            char openingBracket=x.charAt(i);
-            if(openingBracket=='{' 
-            || openingBracket=='('
-            || openingBracket=='['){
-                stack.push(openingBracket);
+            if(x.charAt(i)=='{' 
+            || x.charAt(i)=='('
+            || x.charAt(i)=='['){
+                stack.push(x.charAt(i));
             }
             else{
                 if(stack.isEmpty()){
                     return false;
                 }
-                char closingBracket=stack.pop();
-                if((closingBracket== '{' && openingBracket== '}')
-                || (closingBracket== '(' && openingBracket== ')')
-                || (closingBracket== '[' && openingBracket== ']')){
+                char openingBracket=stack.pop();
+                char closingBracket=x.charAt(i);
+                if((openingBracket== '{' && closingBracket== '}')
+                || (openingBracket== '(' && closingBracket== ')')
+                || (openingBracket== '[' && closingBracket== ']')){
                     continue;
                 }
                 else{
