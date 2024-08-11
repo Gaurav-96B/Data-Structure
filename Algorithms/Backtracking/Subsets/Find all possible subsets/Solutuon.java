@@ -1,4 +1,4 @@
-/*
+/*Given an integer array nums of duplicate elements and the solution set must not contain duplicate subsets*/
 
 class Solution {
     public List<List<Integer>> subsetsWithDup(int[] nums) {
