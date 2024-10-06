@@ -1,13 +1,9 @@
-class Solution
-{
-    //Function to find if there exists a triplet in the 
-    //array A[] which sums up to X.
-    public static boolean find3Numbers(int A[], int n, int X) 
-    { 
+class Solution {
+    public static boolean find3Numbers(int A[], int n, int X) {
       Arrays.sort(A);
-      for(int i=n-1;i>=2;i--){
-          int start=0;
-          int end=i-1;
+      for(int i=0;i<n-2;i++){
+          int start=i+1;
+          int end=n-1;
           while(start<end){
               if(A[start]+A[end]+A[i]==X){
                   return true;
