@@ -1,12 +1,10 @@
-class Solution
-{
-    long countTriplets(long arr[], int n,int sum)
-    {
+class Solution {
+    long countTriplets(int n, int sum, long arr[]) {
       Arrays.sort(arr);
       int count=0;
-      for(int i=n-1;i>=2;i--){
-          int start=0;
-          int end=i-1;
+      for(int i=0;i<n-2;i++){
+          int start=i+1;
+          int end=n-1;
           while(start<end){
               if(arr[start]+arr[end]+arr[i]<sum){
                   count=count+(end-start);
