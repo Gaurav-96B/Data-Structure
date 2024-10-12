@@ -1,26 +1,21 @@
-class Solution{
-    
-    int Countpair(int a[], int n, int sum)
-    {
-        int i=0;
-        int j=n-1;
-        int count=0;
-        while(i<j){
-            if(a[i]+a[j]==sum){
-                count++;
-                i++;
-                j--;
-            }
-            else if(a[i]+a[j]<sum){
-                i++;
-            }
-            else{
-                j--;
-            }
-        }
-        if(count==0){
-            return -1;
-        }
-        return count;
+class Solution {
+    int countPair(int k, int A[]) {
+          int count=0;
+          int start=0;
+          int end=A.length-1;
+          while(start<end){
+              if(A[start]+A[end]==k){
+                  count++;
+                  start++;
+                  end--;
+              }
+              else if(A[start]+A[end]>k){
+                  end--;
+              }
+              else{
+                  start++;
+              }
+          }
+      return count;
     }
 }
