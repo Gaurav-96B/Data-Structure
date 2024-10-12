@@ -2,12 +2,15 @@ class Solution{
     int longSubarrWthSumDivByK(int a[], int n, int k)
     {
        Map<Integer,Integer>map=new HashMap<>();
-       map.put(0,-1);
        int sum=0;
        int maxLen=0;
+       int mod=0;
        for(int i=0;i<n;i++){
            sum=sum+a[i];
-	         int mod=((sum % k) + k) % k;
+	   mod=((sum % k) + k) % k;
+           if(mod==0){
+              maxLen=i+1; 
+           }
            if(map.containsKey(mod)==true){
                maxLen=Math.max(maxLen,i-map.get(mod));
            }
@@ -16,5 +19,6 @@ class Solution{
            }
        }
        return maxLen;
+       
     }
 }
