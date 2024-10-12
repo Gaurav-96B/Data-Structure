@@ -12,6 +12,9 @@ class Solution
            else{
                map.put(A[i],map.get(A[i])+1);
            }
+                         OR
+           map.put(A[i],map.getOrDefault(A[i],0)+1);  
+           
            if(i>=k-1){
                ans.add(map.size());
                if(map.get(A[startIndex])==1){
