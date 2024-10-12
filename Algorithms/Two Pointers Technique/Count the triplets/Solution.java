@@ -1,17 +1,17 @@
 class Solution {
     int countTriplet(int arr[], int n) {
-        Arrays.sort(arr);
+         Arrays.sort(arr);
         int count=0;
-        for(int targetIndex=n-1;targetIndex>=2;targetIndex--){
+        for(int i=n-1;i>=2;i--){
             int start=0;
-            int end=targetIndex-1;
+            int end=n-1;
             while(start<end){
-                if(arr[start]+arr[end]==arr[targetIndex]){
+                if(arr[start]+arr[end]==arr[i]){
                     count++;
                     start++;
                     end--;
                 }
-                else if(arr[start]+arr[end]<arr[targetIndex]){
+                else if(arr[start]+arr[end]<arr[i]){
                     start++;
                 }
                 else{
