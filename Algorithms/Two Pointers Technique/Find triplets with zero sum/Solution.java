@@ -1,22 +1,20 @@
 class Solution
 {
-    //Function to find triplets with zero sum.
-	 public boolean findTriplets(int arr[] , int n)
+ public boolean findTriplets(int A[] , int n)
     {
-      Arrays.sort(arr);
-      int count=0;
-      for(int i=n-1;i>=2;i--){
-          int start=0;
-          int end=i-1;
+      Arrays.sort(A);
+      for(int i=0;i<n;i++){
+          int start=i+1;
+          int end=n-1;
           while(start<end){
-              if(arr[start]+arr[end]+arr[i]==0){
+              if(A[start]+A[end]+A[i]==0){
                   return true;
               }
-              if(arr[start]+arr[end]+arr[i]>0){
-                  end--;
+              else if(A[start]+A[end]+A[i]<0){
+                  start++;
               }
               else{
-                  start++;
+                  end--;
               }
           }
       }
